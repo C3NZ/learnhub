@@ -5,6 +5,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+require('dotenv').config();
+
+// Instantiate database connection
+require('./data/learnhub-db');
+
 // Import our custom routers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
