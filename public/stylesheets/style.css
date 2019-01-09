@@ -1,0 +1,19 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#navbarContainer {
+    padding: 0px;
+}
+
+#welcome {
+    text-align: center;
+}
+
+#welcome h1 {
+    font-size: 75px;
+}
