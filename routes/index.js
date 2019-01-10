@@ -19,7 +19,7 @@ router.get('/subjects', (req, res, next) => {
 
 /* GET math page page. */
 router.get('/subjects/:subjectName', (req, res, next) => {
-    res.locals.subjectName = req.params.subjectName; 
+    res.locals.subjectName = req.params.subjectName;
     res.render('subject', res.locals);
 });
 
