@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    div.container()
+        div.row()
+            div.col-md-12()
+                h1.authHeader() Log in
+                form(method='POST', action='/auth/login?_method=PUT')
+                    div.form-group()
+                        label(for='username') Username
+                        input.form-control#username(type='text', name='username', placeholder='Login', required)
+                    div.form-group()
+                        label(for='password') Password
+                        input.form-control#password(type='password', name='password', placeholder='Password', required)
+                    button.btn.btn-primary.form-control(type='submit') Log in
