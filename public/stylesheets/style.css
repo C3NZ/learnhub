@@ -23,3 +23,11 @@ a {
 #welcomeDesc {
     font-size: 20px;
 }
+
+#navSearch {
+    margin-left: 50px;
+}
+
+.authHeader {
+    text-align: center;
+}
