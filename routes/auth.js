@@ -59,9 +59,10 @@ router.put('/', (req, res) => {
                     const tokenHeaders = { expiresIn: '60 days' };
                     const token = jwt.sign(tokenPayload, process.env.JWT_SECRET, tokenHeaders);
 
-                    // Create a cookie with a encrypted jwt token, then send it to the user
+                    // Send the user their authentication token and then redirect the user to their profile
                     res.cookie('lhAuth', token, { maxAge: 60 * 24 * 60 * 60 * 1000, httpOnly: true });
-                    return res.render('profile', res.locals);
+                    res.locals.profile = user;
+                    return res.redirect(`/users/${user.username}`);
                 }
                 return res.status(403).render('login', res.locals);
             });
@@ -72,7 +73,7 @@ router.put('/', (req, res) => {
 // Sign the user out
 router.delete('/', (req, res) => {
     res.clearCookie('lhAuth');
-    res.render('login', res.locals);
+    res.render('index', res.locals);
 });
 
 module.exports = router;
