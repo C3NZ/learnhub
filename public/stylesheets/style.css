@@ -32,12 +32,43 @@ a {
     text-align: center;
 }
 
+#profilePage {
+    margin-top: 30px;
+}
+
 #profileContainer {
-    text-align: center;
-    margin-top: 4%;
+    padding-left: 20px;
+    text-align: left;
+    margin-top: 1%;
+}
+
+#profileContainer i {
+    font-size: 1.5em;
+}
+
+#profileContainer h1 {
+    font-size: 1.5em;
+}
+
+#profileName {
+    margin-top: 10px;
+}
+
+.info {
+    display: flex;
+}
+
+.infoText {
+    margin-left: 10px;
 }
 
 #profileImg {
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    max-width: 225px;
+    height: 200px;
+}
+
+#curriculaHeader {
+    display: flex;
+    justify-content: space-between;
 }

@@ -35,12 +35,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
-// add the title to res.locals for later use
+// Middleware for any locals that need to be configured and aren't route dependent
 app.use((req, res, next) => {
     res.locals.title = 'Learnhub';
     return next();
 });
 
+// Authenticate every single request
 app.use(authenticate);
 
 // Register our routers
