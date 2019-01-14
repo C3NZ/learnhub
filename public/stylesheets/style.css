@@ -31,3 +31,13 @@ a {
 .authHeader {
     text-align: center;
 }
+
+#profileContainer {
+    text-align: center;
+    margin-top: 4%;
+}
+
+#profileImg {
+    width: 70%;
+    height: 70%;
+}

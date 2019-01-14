@@ -41,7 +41,7 @@ app.use((req, res, next) => {
     return next();
 });
 
-app.use(authenticate)
+app.use(authenticate);
 
 // Register our routers
 app.use('/', indexRouter);
