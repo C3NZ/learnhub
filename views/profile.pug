@@ -2,7 +2,22 @@ extends layout
 
 block content
     div.container()
-        div.row()
-            div.col-md-8.offset-md-2#profileContainer()
+        div.row#profilePage()
+            div.col-md-3#profileContainer()
                 img#profileImg(src='/img/pfp.png')
-                h1#profileName()= profile.username
+                div.info#profileName()
+                    i.fas.fa-user()
+                    h1.infoText()= profile.username
+                div.info#profileRole() 
+                    i.fas.fa-info-circle()
+                    h1.infoText()= profile.accountType
+                div.info#profileInfo()
+                    if profile.description
+                        p= profile.description
+                    else
+                        p No bio
+            div.col-md-9#curriculaContainer()
+                div#curriculaHeader 
+                    h1() Created Curricula
+                    button.btn.btn-primary() Create Curriculum
+                hr 
