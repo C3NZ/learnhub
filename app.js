@@ -12,6 +12,10 @@ require('dotenv').config();
 // Instantiate database connection
 require('./data/learnhub-db');
 
+// Import custom middleware
+const authenticate = require('./lib/authenticate');
+const authorize = require('./lib/authorize');
+
 // Import our custom routers
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -36,6 +40,8 @@ app.use((req, res, next) => {
     res.locals.title = 'Learnhub';
     return next();
 });
+
+app.use(authenticate)
 
 // Register our routers
 app.use('/', indexRouter);

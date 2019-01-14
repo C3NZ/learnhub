@@ -5,7 +5,7 @@ block content
         div.row()
             div.col-md-12()
                 h1.authHeader() Log in
-                form(method='POST', action='/auth/login?_method=PUT')
+                form(method='POST', action='/auth?_method=PUT')
                     div.form-group()
                         label(for='username') Username
                         input.form-control#username(type='text', name='username', placeholder='Login', required)
