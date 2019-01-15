@@ -20,5 +20,7 @@ block content
             div.col-md-9#curriculaContainer()
                 div#curriculaHeader 
                     h1() Created Curricula
-                    button.btn.btn-primary() Create Curriculum
+                    if profilesMatch
+                            button.btn.btn-primary() Create Curriculum
+                    
                 hr 

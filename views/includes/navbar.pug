@@ -22,7 +22,12 @@ div.container-fluid#navbarContainer()
                             li.nav-item()
                                 a.nav-link(href='/auth/login') Log in
                         else
-                            li.nav-item()
-                                a.nav-link(href='/users/' + user.username) #{user.username}
-                            li.nav-item()
-                                a.nav-link(href='/auth?_method=DELETE') Sign out
+                            li.nav-item.dropdown()
+                                a.nav-link.dropdown-toggle(href='/users/' + user.username, role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')= user.username
+                                div.dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdown')
+                                    a.dropdown-item(href='/users/' + user.username) Profile
+                                    a.dropdown-item(href='/curricula') Curricula
+                                    a.dropdown-item(href='/settings') Settings
+                                    div.dropdown-divider()
+                                    a.dropdown-item(href='/auth/signout') Sign out
+                                  

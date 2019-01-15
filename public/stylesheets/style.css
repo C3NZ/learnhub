@@ -37,7 +37,7 @@ a {
 }
 
 #profileContainer {
-    padding; 0px;
+    padding: 0px;
     text-align: left;
     margin-top: 1%;
 }
@@ -71,4 +71,8 @@ a {
 #curriculaHeader {
     display: flex;
     justify-content: space-between;
+}
+
+#signOutButton {
+    font-size: 1em;
 }
