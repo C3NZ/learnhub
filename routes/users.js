@@ -15,8 +15,13 @@ router.get('/:user', function(req, res, next) {
         .then((user) => {
             if (user) {
                 res.locals.profile = user;
+                
+                if (user.username === res.locals.user.username) {
+                    res.locals.profilesMatch = true;
+                }
+
+                return res.render('profile', res.locals);
             }
-            res.render('profile', res.locals);
         })
         .catch((err) => {
             if (process.env.DEBUG_MODE) {

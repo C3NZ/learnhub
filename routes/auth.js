@@ -71,10 +71,9 @@ router.put('/', (req, res) => {
 });
 
 // Sign the user out
-router.delete('/', (req, res) => {
+router.get('/signout', (req, res) => {
     res.clearCookie('lhAuth');
     res.redirect('/');
 });
-
 
 module.exports = router;
